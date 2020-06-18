@@ -1,4 +1,5 @@
 <?php
-include "../src/templates/header.html";
+require_once "../src/templates/header.html";
+require_once "forms.php";
 echo "<h3>BODY<h3>";
-include "../src/templates/footer.html";
+require_once "../src/templates/footer.html";

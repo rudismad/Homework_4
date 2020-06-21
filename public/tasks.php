@@ -1,9 +1,10 @@
 <?php
 
 session_start();
-require_once "../src/templates/header.php";
-require_once "../config/config.php";
 include "../src/templates/logoutForm.html";
+// require_once "../src/templates/header.html";
+require_once "../config/config.php";
+// include "../src/templates/logoutForm.html";
 include "../src/templates/addTaskForm.html";
 
 

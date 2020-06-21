@@ -1,10 +1,10 @@
 <?php
 
 session_start();
-include "../src/templates/logoutForm.html";
+include "../src/templates/loggedInForm.html";
 // require_once "../src/templates/header.html";
 require_once "../config/config.php";
-// include "../src/templates/logoutForm.html";
+// include "../src/templates/loggedInForm.html";
 include "../src/templates/addTaskForm.html";
 
 
@@ -36,11 +36,11 @@ if ($result->num_rows > 0) {
       $html .= "<input class='input-task' name='task' value='$task' size='30'>";
       $html .= " Created on:" . $row["created"];
       $html .= "<br>";
-      $html .= "<button type='submit' class='update-task' name='updateTask' value='$id'>UPDATE TASK</button>";
+      $html .= "<button type='submit' class='update-task' name='updateTask' value='$id'>EDIT</button>";
     $html .= "</form>";
       $html .= "<form class='input-task' action='deleteTask.php' method='post'>";
       $html .= "<button type='submit' name='deleteTask' value='$id'>";
-      $html .= "DELETE TASK</button>";
+      $html .= "DELETE</button>";
     $html .= "</form>";
     $html .= "</div>";
         echo $html;

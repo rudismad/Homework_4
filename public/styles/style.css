@@ -1,26 +1,21 @@
 body {
     margin: 0;
-    background: #1f4037;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #99f2c8, #1f4037);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #99f2c8, #1f4037);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #99f2c8;
 }
 
 .navbar {
     /* overflow: hidden; */
+    font-family: 'Staatliches', cursive;
     background-color: #f2f2f2;
     position: fixed;
     top: 0;
     width: 100%;
-    font-family: 'Staatliches', cursive;
 }
 
 .navbar a {
     float: left;
     display: block;
-    color: #d11c1c;
+    color: #196e58;
     text-align: center;
     padding: 5px 16px;
     text-decoration: none;
@@ -32,16 +27,46 @@ body {
     color: black;
 }
 
+.logout:hover {
+    background: #f2f2f2;
+    color: red !important;
+}
+
 .main {
     padding: 16px;
     margin: 30px 0 0 0;
-    height: 1500px;
 }
 
 .add-form {
-    margin: 30px 0 0 0;
+    font-weight: 800;
 }
 
 .logout {
     color: #000000 !important;
+}
+
+.input-task {
+    margin: 10px 10px 10px 0;
+    /* padding: 10px; */
+    display: inline;
+    align-items: center;
+    ;
+}
+
+.foot {
+    background-color: #f2f2f2;
+    font-family: 'Staatliches', cursive;
+    margin-top: 500px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.task-box {
+    border: solid #196e58 2px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+    padding: 10px;
 }

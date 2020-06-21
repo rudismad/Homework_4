@@ -30,17 +30,19 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     $id= $row["id"];
     $task= $row["task"];
-    $html = "<form action='updateTask.php' method='post'>";
-      // $html .= "id: " . $row["id"]; //set $html text here
-      $html .= "<input name='task' value='$task'>";
-      $html .= "<button type='submit' class='update-task' name='updateTask' value='$id'>UPDATE TASK</button>";
+    $html = "<div class='task-box'>";
+    $html .= "<form class='input-task' action='updateTask.php' method='post'>";
+      // $html .= "id: " . $row["id"]; //set $html text here <textarea name="message" rows="2" cols="40">
+      $html .= "<input class='input-task' name='task' value='$task' size='30'>";
       $html .= " Created on:" . $row["created"];
+      $html .= "<br>";
+      $html .= "<button type='submit' class='update-task' name='updateTask' value='$id'>UPDATE TASK</button>";
     $html .= "</form>";
-      $html .= "<form action='deleteTask.php' method='post'>";
+      $html .= "<form class='input-task' action='deleteTask.php' method='post'>";
       $html .= "<button type='submit' name='deleteTask' value='$id'>";
       $html .= "DELETE TASK</button>";
     $html .= "</form>";
-
+    $html .= "</div>";
         echo $html;
       }
 } else {

@@ -26,15 +26,18 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-            // var_dump($row);
-        $id=$row["id"];
-        $html="id: " . $row["id"];
-        $html.="task - " . $row["task"];
-        $html.= " Created on:" . $row["created"];
-        $html .= "<form action='deleteTask.php' method='post'>";
-        $html .= "<button type='submit' name='deleteTask' value='$id'>";
-        $html .= "DELETE TASK</button>";
-        $html .= "</form>";
+    $id= $row["id"];
+    $task= $row["task"];
+    $html = "<form action='updateTask.php' method='post'>";
+      $html .= "id: " . $row["id"]; //set $html text here
+      $html .= "<input name='task' value='$task'>";
+      $html .= "<button type='submit' class='update-task' name='updateTask' value='$id'>UPDATE TASK</button>";
+      $html .= " Created on:" . $row["created"];
+    $html .= "</form>";
+      $html .= "<form action='deleteTask.php' method='post'>";
+      $html .= "<button type='submit' name='deleteTask' value='$id'>";
+      $html .= "DELETE TASK</button>";
+    $html .= "</form>";
 
         echo $html;
       }

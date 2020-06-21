@@ -3,6 +3,7 @@
 session_start();
 require_once "../src/templates/header.php";
 require_once "../config/config.php";
+include "../src/templates/logoutForm.html";
 include "../src/templates/addTaskForm.html";
 
 
@@ -29,7 +30,7 @@ if ($result->num_rows > 0) {
     $id= $row["id"];
     $task= $row["task"];
     $html = "<form action='updateTask.php' method='post'>";
-      $html .= "id: " . $row["id"]; //set $html text here
+      // $html .= "id: " . $row["id"]; //set $html text here
       $html .= "<input name='task' value='$task'>";
       $html .= "<button type='submit' class='update-task' name='updateTask' value='$id'>UPDATE TASK</button>";
       $html .= " Created on:" . $row["created"];
